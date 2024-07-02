@@ -1,17 +1,50 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import Slider, { Settings } from 'react-slick';
 import { EuiFlexGroup, EuiFlexItem, EuiIcon, EuiImage, EuiText, EuiTitle } from '@elastic/eui';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../App.css';
 
-const sliderImages = [
-  { id: 1, src: '/adpage.png', alt: 'Image 1',title:'Advertising' },
-  { id: 2, src: '/adpage.png', alt: 'Image 2',title:'Marketing' },
-  { id: 3, src: '/adpage.png', alt: 'Image 3',title:'Solution' },
-];
 
-const SliderComponent: React.FC = () => {
+const CustomNextArrow = (props: any) => {
+  const { className, style, onClick } = props;
+  return (
+    <EuiImage
+      className={className}
+      style={{ ...style, display: "block", width: '60px', height: '60px' }}
+      src="/rightArrow1.png"
+      alt="right"
+      onClick={onClick}
+    />
+  );
+};
+
+const CustomPrevArrow = (props: any) => {
+  const { className, style, onClick } = props;
+  return (
+    <EuiImage
+      className={className}
+      style={{ ...style, display: "block", width: '60px', height: '60px' }}
+      src="/leftArrow1.png"
+      alt="left"
+      onClick={onClick}
+    />
+  );
+};
+
+export interface SliderComponentProps{
+  filename:string
+}
+
+const SliderComponent: FunctionComponent<SliderComponentProps> = ({
+  filename
+}) => {
+  const sliderImages = [
+    { id: 1, src: `/${filename}`, alt: 'Image 1',title:'Advertising' },
+    { id: 2, src: `/${filename}`, alt: 'Image 2',title:'Marketing' },
+    { id: 3, src: `/${filename}`, alt: 'Image 3',title:'Solution' },
+  ];
+  
   const settings:Settings = {
     dots: true,
     infinite: true,
@@ -21,9 +54,9 @@ const SliderComponent: React.FC = () => {
     arrows:true,
     autoplay:true,
     autoplaySpeed:2200,
-    adaptiveHeight: true
-    // nextArrow:<EuiImage src='/rightArrow.png' alt='right' style={{width:'150px'}}/>,
-    // prevArrow:  <EuiImage src='/rightArrow.png' alt='right' style={{width:'150px'}}/>,
+    adaptiveHeight: true,
+    nextArrow:<CustomNextArrow/>,
+    prevArrow:  <CustomPrevArrow />,
   };
 
   return (

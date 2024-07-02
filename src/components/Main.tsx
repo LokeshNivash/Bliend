@@ -1,16 +1,20 @@
 import { EuiPage, EuiPageBody, EuiFlexGroup, EuiFlexItem, EuiPageSection, EuiIcon, EuiImage } from "@elastic/eui"
 import SliderComponent from "./SliderComponent"
+import { FunctionComponent } from "react"
 
-const Main = () => {
+export interface MainProps{
+    size?:number
+}
+const Main:FunctionComponent<MainProps> = ({ size}) => {
     return <>
-        <EuiPage style={{ backgroundColor: 'transparent', maxWidth: '100%', overflow: 'hidden' }} >
+        <EuiPage style={{ backgroundColor: 'transparent', maxWidth: '100%', height:"190%", overflow: 'hidden' }}  id="services-section">
             <EuiPageBody component="div">
                 <EuiFlexGroup>
                     <EuiFlexItem>
                         <EuiPageSection className="left-section">
                             <div className="box">
-                                <div style={{ display: 'flex', justifyContent: 'start', marginLeft: '-20px' }}>
-                                    <img src="/logo.png" alt="Company Logo" className="company-logo" />
+                                <div style={{ display: 'flex', justifyContent: 'start',alignItems:'center', marginLeft: '-20px',paddingTop:'0' }}>
+                                    <img src="/logo.png" alt="Company Logo" style={{width:'50px',height:'50px',marginRight:'10px'}} />
                                     <h2 className="title">BLIEND</h2>
                                 </div>
                                 <h1 className="title">WHY YOU NEED US</h1>
@@ -32,9 +36,8 @@ const Main = () => {
                         <EuiPageSection className="right-section">
                             <div >
                                 <h2 className="service-title">SERVICES</h2>
-                                <SliderComponent />
+                                <SliderComponent filename="adpage.png"/>
                             </div>
-
                         </EuiPageSection>
                     </EuiFlexItem>
                 </EuiFlexGroup>

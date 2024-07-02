@@ -8,8 +8,6 @@ import {
     EuiHeader,
     EuiHeaderLink,
     EuiHeaderLogo,
-    EuiImage,
-    EuiText,
     useEuiMaxBreakpoint,
     useEuiMinBreakpoint
 } from '@elastic/eui';
@@ -73,6 +71,7 @@ const HeaderComponent: FunctionComponent = () => {
     padding-right:10px;
     padding-left:10px;
     text-decoration:none;
+    background-color:black;
 
   &:hover {
     background-color:rgba(143, 133, 200, 0.685);
@@ -98,16 +97,20 @@ const HeaderComponent: FunctionComponent = () => {
                     <EuiFlexItem className="nav-items">
                         <EuiFlexGroup justifyContent="spaceAround">
                             <EuiFlexItem grow={false}>
-                                <HeaderLink href="#">Services</HeaderLink>
+                                <HeaderLink  onClick={()=>{
+                                    document.getElementById('services-section')?.scrollIntoView({behavior:'smooth'})
+                                }} >Services</HeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem grow={false}>
-                                <HeaderLink href="#">Solutions</HeaderLink>
+                                <HeaderLink onClick={()=>{
+                                    document.getElementById('advertisement-section')?.scrollIntoView({behavior:'smooth'})
+                                }} >Advertisement</HeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem grow={false}>
-                                <HeaderLink href="#">Marketing</HeaderLink>
+                                <HeaderLink >Marketing</HeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem grow={false}>
-                                <HeaderLink href="#">Contact Us</HeaderLink>
+                                <HeaderLink >Contact Us</HeaderLink>
                             </EuiFlexItem>
                         </EuiFlexGroup>
                     </EuiFlexItem>

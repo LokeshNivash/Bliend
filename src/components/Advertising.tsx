@@ -1,56 +1,66 @@
-import React, { FunctionComponent } from 'react';
-import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
-  EuiImage,
-  EuiButtonIcon,
-} from '@elastic/eui';
-import styled from '@emotion/styled';
+import { EuiFlexGroup, EuiFlexItem } from '@elastic/eui';
+import '@elastic/eui/dist/eui_theme_light.css';
+import './Advertising.css';
+import SliderComponent from './SliderComponent';
 
-const backgroundImage="/background.png"
+const AdvertisingPage = () => (
+  <div >
+    <div className="header">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" transform='rotate(180)' style={{ minWidth: '100%' }}>
+        <path fill="url(#grad1)" fill-opacity="1" d="M0,192L48,165.3C96,139,192,85,288,96C384,107,480,181,576,181.3C672,181,768,107,864,101.3C960,96,1056,160,1152,176C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{
+              stopColor: "rgba(2,74,174,0.9842787456779587)",
+              stopOpacity: '1'
+            }} />
+            <stop offset="100%" style={{
+              stopColor: 'rgba(132,23,236,0.9394608185070903)',
+              stopOpacity: '1'
+            }} />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div >
+    <EuiFlexGroup id='advertisement-section'>
+      <EuiFlexItem grow={false} className='leftbox'>
+        <h1 className="ad-title">ADVERTISEMENTS</h1>
+        <p className="ad-summary">
+          We offer a wide array of
+          advertising services, supported by
+          a team of highly creative
+          2
+          professionals dedicated to
+          enhancing our advertising
+          endeavors.
+        </p>
+      </EuiFlexItem>
+      <EuiFlexItem grow={false} className='billboard'>        
+        <div >
+        <SliderComponent  filename='bill-board.png' />
+        </div>
 
-const PageContainer = styled.div`
-  background: url(${backgroundImage}) no-repeat center center;
-   background-size: 100%;
-  height: 100vh;
-  padding: 20px;
-  color: white;
-  border:none;
-`;
+      </EuiFlexItem>
+    </EuiFlexGroup>
 
+    <div >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" transform='rotate(180)' style={{ minWidth: '100%' }}>
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style={{
+              stopColor: '#0000ff',
+              stopOpacity: '1'
+            }} />
+            <stop offset="100%" style={{
+              stopColor: "#800080",
+              stopOpacity: '1'
+            }} />
+          </linearGradient>
+        </defs>
+        <path fill="url(#grad1)" fillOpacity="1" d="M0,256L80,234.7C160,213,320,171,480,138.7C640,107,800,85,960,101.3C1120,117,1280,171,1360,197.3L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+      </svg>
+    </div>
+  </div>
+);
 
-
-const ArrowButton = styled(EuiButtonIcon)`
-  margin: 0 20px;
-  color: #ff69b4; /* Pink color */
-`;
-
-const AdvertisementPage: FunctionComponent = () => {
-  return (
-    <PageContainer>
-      {/* <EuiFlexGroup justifyContent="center" alignItems="center" style={{ height: '100%' }}>
-        <EuiFlexItem grow={false}>
-          <ArrowButton iconType="arrowLeft" aria-label="Previous Advertisement" />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-            <EuiText>
-              <h2>Advertisements</h2>
-              <p>We offer a wide array of advertising services, supported by a team of highly creative...</p>
-            </EuiText>
-            <EuiImage
-              size="l"
-              hasShadow
-              alt="For Advertising"
-              src="path-to-your-image.png" // Update with the actual path
-            />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <ArrowButton iconType="arrowRight" aria-label="Next Advertisement" />
-        </EuiFlexItem>
-      </EuiFlexGroup> */}
-    </PageContainer>
-  );
-};
-
-export default AdvertisementPage;
+export default AdvertisingPage
