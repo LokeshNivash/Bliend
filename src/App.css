@@ -36,6 +36,7 @@
 
 html, body, #root, .app-page {
   max-width: fit-content;
+  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
@@ -96,7 +97,7 @@ header {
 
 
 .summary{
-  font-size: 40px;
+  font-size: 25px;
   text-align: start;
 }
 
@@ -115,6 +116,11 @@ header {
   border-radius: 8px;
   text-align: center;
   /* border: 2px solid black; */
+}
+
+.left-section .box{
+  /* border: 2px solid black; */
+  width: 60%;
 }
 
 .left-section .box, .right-section .box {
@@ -180,4 +186,37 @@ header {
   font-size: x-large;
   /* margin-left: 30px; */
   text-decoration: none;
+}
+
+/* header styling */
+.custom-header {
+  background-color: #0a0a23;
+  /* background-color: transparent; */
+  color: black;
+}
+
+.custom-header a {
+  padding: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  /* border: 2px solid black; */
+  color: white;
+  font-weight: bold;
+  border-radius: 0;
+  text-transform: uppercase;
+  /* background-color: rgba(143, 133, 200, 0.685); */
+  text-decoration: none;
+}
+
+.custom-header a:hover{
+  background-color: rgba(143, 133, 200, 0.685);
+  text-decoration: none;
+}
+
+.custom-header .euiHeaderLogo {
+  font-size: 1.5rem;
+}
+
+.custom-header .euiHeaderLink {
+  margin: 0 10px;
 }
