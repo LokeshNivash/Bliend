@@ -1,45 +1,18 @@
 /* App.css */
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.slider-container {
-  position: relative;
-  width: 600px;
-  max-width: fit-content;
-  margin-right: 50px;
-  /* margin: auto; */
-  /* margin-right: 50px; */
-  /* margin:  50px; */
-}
-
-
-.slick-prev, .slick-next {
-  width: 30px;
-  height: 30px;
-  z-index: 1;
-}
-
-.slick-prev:before, .slick-next:before {
-  font-size: 30px;
-  color: white;
-}
-
-
-
-.slider-image {
-  max-width: 100%;
-  border-radius: 8px;
-  /* border: 2px solid blue; */
-  text-align: center;
-}
-
-html, body, #root, .app-page {
-  max-width: fit-content;
+html, body, #root {
+  /* max-width: fit-content; */
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
+}
+
+.ad-page{
+  margin:0;
+  padding: 0;
 }
 
 .app-page {
@@ -47,60 +20,10 @@ html, body, #root, .app-page {
   color: white;
 }
 
-@media screen and (max-width: 760px) {
-  html, body, #root, .app-page {
-    width: 100%;
-    /* height: 100vh; */
-    min-height: 100vh;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    /* color: white; */
-  }
-
-  .app-page {
-    background: linear-gradient(180deg, rgba(2,74,174,0.9842787456779587) 12%, rgba(132,23,236,0.9394608185070903) 72%, rgba(92,14,167,0.9422619389552696) 92%, rgba(28,13,56,0.894642891336222) 100%);
-    color: white;
-  }
-
-  .slider-container {
-    position: relative;
-    width: 70%;
-    max-width: fit-content;
-    align-items: center;
-    margin: auto;
-    margin-right: 80px;
-  }
-
-  .right-section{
-    /* border: 2px solid black; */
-    margin: auto;
-    max-width: fit-content;
-    align-items: center;
-  }
-}
-
-
 header {
   background: transparent;
 }
-.title{
-  font-size: 50px;
-  text-align: start;
-}
 
-.service-title{
-  font-size: 50px;
-  text-align: center;
-}
-
-
-.summary{
-  font-size: 25px;
-  text-align: start;
-}
 
 .page-body {
   display: flex;
@@ -108,43 +31,6 @@ header {
   align-items: center;
   flex: 1;
   background-color: transparent;
-}
-
-.left-section, .right-section {
-  background-color: rgba(255, 255, 255, 0.1);
-  /* padding: 20px; */
-  max-width: fit-content;
-  border-radius: 8px;
-  text-align: center;
-  /* border: 2px solid black; */
-}
-
-.left-section .box{
-  /* border: 2px solid black; */
-  width: 70%;
-}
-
-.left-section .box, .right-section .box {
-  max-width: auto;
-  padding-left: 20px;
-  padding-right: 30px;
-  margin: 0 auto;
-}
-
-.company-logo {
-  width: 50px;
-  height: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 30px;
-}
-
-.services-image {
-  /* width: 400px; */
-  /* justify-items: center; */
-  max-width: 60%;
-  /* width: 350px; */
-  /* margin: 20px 0; */
 }
 
 .euiHeader {
@@ -168,12 +54,12 @@ header {
   text-decoration: underline;
 }
 
-.euiHeaderSectionItem {
+/* .euiHeaderSectionItem {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px 0;
-}
+} */
 
 .header-section {
   display: flex;
@@ -185,14 +71,11 @@ header {
 #header-link{
   color: white;
   font-size: x-large;
-  /* margin-left: 30px; */
   text-decoration: none;
 }
 
-/* header styling */
 .custom-header {
   background-color: #0a0a23;
-  /* background-color: transparent; */
   color: black;
 }
 
@@ -200,12 +83,10 @@ header {
   padding: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  /* border: 2px solid black; */
   color: white;
   font-weight: bold;
   border-radius: 0;
   text-transform: uppercase;
-  /* background-color: rgba(143, 133, 200, 0.685); */
   text-decoration: none;
 }
 
@@ -222,3 +103,20 @@ header {
   margin: 0 10px;
 }
 
+
+@media screen and (max-width: 1160px) {
+  html, body, #root, .app-page {
+    width: auto;
+    max-height: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  .app-page {
+    background: linear-gradient(180deg, rgba(2,74,174,0.9842787456779587) 12%, rgba(132,23,236,0.9394608185070903) 72%, rgba(92,14,167,0.9422619389552696) 92%, rgba(28,13,56,0.894642891336222) 100%);
+    color: white;
+  }
+}

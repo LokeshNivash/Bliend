@@ -79,12 +79,12 @@ const HeaderComponent: FunctionComponent = () => {
   `;
 
     return (
-        <>
+     <>
             <EuiHeader style={{ background: '#0a0a23' }} position="fixed" className="custom-headcxer">
                 <HeaderContainer>
                     <EuiFlexItem grow={false} className="menu-icon">
                         <EuiButtonIcon
-                        style={{ background:'transparent',border:'none',color:'white'}}
+                            style={{ background: 'transparent', border: 'none', color: 'white' }}
                             color='success'
                             iconType="menu"
                             aria-label="Open menu"
@@ -97,17 +97,19 @@ const HeaderComponent: FunctionComponent = () => {
                     <EuiFlexItem className="nav-items">
                         <EuiFlexGroup justifyContent="spaceAround">
                             <EuiFlexItem grow={false}>
-                                <HeaderLink  onClick={()=>{
-                                    document.getElementById('services-section')?.scrollIntoView({behavior:'smooth'})
+                                <HeaderLink  onClick={() => {
+                                    document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })
                                 }} >Services</HeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem grow={false}>
-                                <HeaderLink onClick={()=>{
-                                    document.getElementById('advertisement-section')?.scrollIntoView({behavior:'smooth'})
+                                <HeaderLink onClick={() => {
+                                    document.getElementById('advertisement-section')?.scrollIntoView({ behavior: 'smooth' })
                                 }} >Advertisement</HeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem grow={false}>
-                                <HeaderLink >Marketing</HeaderLink>
+                                <HeaderLink onClick={() => {
+                                    document.getElementById('marketing-section')?.scrollIntoView({ behavior: 'smooth' })
+                                }}>Marketing</HeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem grow={false}>
                                 <HeaderLink >Contact Us</HeaderLink>
@@ -129,22 +131,32 @@ const HeaderComponent: FunctionComponent = () => {
                     hideCloseButton
                 >
                     <EuiFlyoutHeader hasBorder>
-                        <EuiHeaderLogo  iconType="logoElastic" ><p style={{color:'white'}}>Bliend</p></EuiHeaderLogo>
+                        <EuiHeaderLogo iconType="logoElastic" ><p style={{ color: 'white' }}>Bliend</p></EuiHeaderLogo>
                     </EuiFlyoutHeader>
                     <EuiFlyoutBody>
                         <EuiFlexGroup direction="column" gutterSize="s">
                             <EuiFlexItem>
-                                <EuiHeaderLink className='header-link' href="#" onClick={closeFlyout}>
+                                <EuiHeaderLink className='header-link' href="#" onClick={() => {
+                                    document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })
+                                    closeFlyout()
+                                }}>
                                     Services
                                 </EuiHeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem>
-                                <EuiHeaderLink className='header-link' href="#" onClick={closeFlyout}>
-                                    Solutions
+                                <EuiHeaderLink className='header-link' href="#" 
+                                 onClick={() => {
+                                    document.getElementById('advertisement-section')?.scrollIntoView({ behavior: 'smooth' })
+                                    closeFlyout()
+                                }}>
+                                    Advertisement
                                 </EuiHeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem>
-                                <EuiHeaderLink className='header-link' href="#" onClick={closeFlyout}>
+                                <EuiHeaderLink className='header-link' href="#" onClick={() => {
+                                    document.getElementById('marketing-section')?.scrollIntoView({ behavior: 'smooth' })
+                                    closeFlyout()
+                                }}>
                                     Marketing
                                 </EuiHeaderLink>
                             </EuiFlexItem>
@@ -157,7 +169,7 @@ const HeaderComponent: FunctionComponent = () => {
                     </EuiFlyoutBody>
                 </EuiFlyout>
             )}
-        </>
+       </>
     );
 };
 

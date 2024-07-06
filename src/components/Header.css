@@ -6,7 +6,6 @@
     background-color: #0a0a23;
     color: white;
     padding: 0 20px;
-    /* Adjust padding as needed */
 }
 
 .header-link {
@@ -19,10 +18,9 @@
 
 .header-link:hover {
     color: #ffd700;
-    /* Change this to your desired hover color */
 }
 
-@media (max-width: 1023px) {
+/* @media (max-width: 593px) {
     .nav-items {
         display: none;
     }
@@ -36,11 +34,11 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 594px) {
     .menu-icon {
         display: none;
     }
-}
+} */
 
 .flyout {
     color: white;

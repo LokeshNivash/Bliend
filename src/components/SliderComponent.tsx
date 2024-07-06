@@ -1,9 +1,9 @@
-import React, { FunctionComponent } from 'react';
+import { EuiFlexGroup, EuiFlexItem, EuiImage } from '@elastic/eui';
+import { FunctionComponent } from 'react';
 import Slider, { Settings } from 'react-slick';
-import { EuiFlexGroup, EuiFlexItem, EuiIcon, EuiImage, EuiText, EuiTitle } from '@elastic/eui';
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../App.css';
+import "slick-carousel/slick/slick.css";
+import './SliderComponent.css';
 
 
 const CustomNextArrow = (props: any) => {
@@ -11,8 +11,10 @@ const CustomNextArrow = (props: any) => {
   return (
     <EuiImage
       className={className}
-      style={{ ...style, display: "block", width: '60px', height: '60px' }}
-      src="/rightArrow1.png"
+      style={{ ...style, display: "block", width: '60px', height: 'auto',   
+        // background: "linear-gradient(90deg, rgba(2,74,174,0.9842787456779587) 12%, rgba(132,23,236,0.9394608185070903) 72%, rgba(92,14,167,0.9422619389552696) 92%, rgba(28,13,56,0.894642891336222) 100%)",
+      }}
+      src="/icons/RIGHT SCROLL BUTTON.png"
       alt="right"
       onClick={onClick}
     />
@@ -24,8 +26,12 @@ const CustomPrevArrow = (props: any) => {
   return (
     <EuiImage
       className={className}
-      style={{ ...style, display: "block", width: '60px', height: '60px' }}
-      src="/leftArrow1.png"
+      style={{ ...style, display: "block", width: '60px', height: 'auto',
+        zIndex:2 
+      // background: "linear-gradient(270deg, rgba(2,74,174,0.9842787456779587) 12%, rgba(132,23,236,0.9394608185070903) 72%, rgba(92,14,167,0.9422619389552696) 92%, rgba(28,13,56,0.894642891336222) 100%)",
+        // borderRadius:'50%',
+       }}
+      src="/icons/LEFT SCROLL BUTTON.png"
       alt="left"
       onClick={onClick}
     />
@@ -34,16 +40,29 @@ const CustomPrevArrow = (props: any) => {
 
 export interface SliderComponentProps{
   filename:string
+  autoplay:boolean
 }
 
 const SliderComponent: FunctionComponent<SliderComponentProps> = ({
-  filename
+  filename,
+  autoplay
 }) => {
   const sliderImages = [
     { id: 1, src: `/${filename}`, alt: 'Image 1',title:'Advertising' },
-    { id: 2, src: `/${filename}`, alt: 'Image 2',title:'Marketing' },
-    { id: 3, src: `/${filename}`, alt: 'Image 3',title:'Solution' },
+    { id: 2, src: `/OUTDOOR DISPLAY ONE.png`, alt: 'Image 2',title:'Marketing' },
+    { id: 3, src: `/BILL_BOARD.png`, alt: 'Image 3',title:'Solution' },
   ];
+
+  const adImages=[
+    { id: 1, src: `/outdoor/BILL BOARD.png`, alt: 'Image 1',title:'Outdoor' },
+    { id: 2, src: `/outdoor/FLAGS.png`, alt: 'Image 2',title:'Outdoor' },
+    { id: 3, src: `/outdoor/OUTDOOR DISPLAY ONE.png`, alt: 'Image 3',title:'Outdoor' },
+    { id: 4, src: `/outdoor/OUTDOOR DISPLAY TWO.png`, alt: 'Image 4',title:'Outdoor' },
+    { id: 5, src: `/outdoor/STANDINGS.png`, alt: 'Image 5',title:'Outdoor' },
+    { id: 6, src: `/print/MAGAZINE ONE.png`, alt: 'Image 6',title:'Print' },
+    { id: 7, src: `/print/MAGAZINE TWO.png`, alt: 'Image 7',title:'Print' },
+    { id: 8, src: `/television/TELEVISION ADS.png`, alt: 'Image 8',title:'Television' },
+  ]
   
   const settings:Settings = {
     dots: true,
@@ -52,7 +71,7 @@ const SliderComponent: FunctionComponent<SliderComponentProps> = ({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows:true,
-    autoplay:true,
+    autoplay,
     autoplaySpeed:2200,
     adaptiveHeight: true,
     nextArrow:<CustomNextArrow/>,
@@ -60,11 +79,10 @@ const SliderComponent: FunctionComponent<SliderComponentProps> = ({
   };
 
   return (
-    <EuiFlexGroup justifyContent="center" alignItems="center">
-      <EuiFlexItem grow={true}>
+
         <div className="slider-container">
           <Slider {...settings}>
-            {sliderImages.map(image => (
+            {adImages.map(image => (
               <div key={image.id} className="slider-content">
                 <EuiImage  src={image.src} alt={image.alt} className="slider-image" />
                 <h1 style={{textAlign:'center'}}><strong>{image.title}</strong></h1>
@@ -72,8 +90,6 @@ const SliderComponent: FunctionComponent<SliderComponentProps> = ({
             ))}
           </Slider>
         </div>
-      </EuiFlexItem>
-    </EuiFlexGroup>
   );
 }
 

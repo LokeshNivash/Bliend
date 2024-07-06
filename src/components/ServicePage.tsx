@@ -1,19 +1,20 @@
-import { EuiPage, EuiPageBody, EuiFlexGroup, EuiFlexItem, EuiPageSection, EuiIcon, EuiImage } from "@elastic/eui"
-import SliderComponent from "./SliderComponent"
+import { EuiFlexGrid, EuiFlexItem, EuiPage, EuiPageBody, EuiPageSection } from "@elastic/eui"
 import { FunctionComponent } from "react"
+import './ServicePage.css'
+import SliderComponent from "./SliderComponent"
 
-export interface MainProps{
+export interface ServicePageProps{
     size?:number
 }
-const Main:FunctionComponent<MainProps> = ({ size}) => {
+const ServicePage:FunctionComponent<ServicePageProps> = ({ size}) => {
     return <>
-        <EuiPage style={{ backgroundColor: 'transparent', maxWidth: '100%', height:"190%", overflow: 'hidden' }}  id="services-section">
-            <EuiPageBody component="div">
-                <EuiFlexGroup>
-                    <EuiFlexItem>
+        <EuiPage  style={{ backgroundColor: 'transparent',paddingBottom:'200px' }}  id="services-section" >
+            <EuiPageBody  component="div">
+                <EuiFlexGrid responsive={true} columns={2} direction="row" gutterSize="none">
+                    <EuiFlexItem grow={false}>
                         <EuiPageSection className="left-section">
                             <div className="box">
-                                <div style={{ display: 'flex', justifyContent: 'start',alignItems:'center', marginLeft: '-20px',paddingTop:'0' }}>
+                                <div style={{ display: 'flex', justifyContent: 'start',alignItems:'center',paddingTop:'0' }}>
                                     <img src="/logo.png" alt="Company Logo" style={{width:'50px',height:'50px',marginRight:'10px'}} />
                                     <h2 className="title">BLIEND</h2>
                                 </div>
@@ -28,7 +29,8 @@ const Main:FunctionComponent<MainProps> = ({ size}) => {
                                     resonate with audiences and drive success. From concept
                                     to execution, we are dedicated to delivering exceptional
                                     results that elevate your brand and set it apart in a
-                                    competitive market.                                </p>
+                                    competitive market.                                
+                                </p>
                             </div>
                         </EuiPageSection>
                     </EuiFlexItem>
@@ -36,14 +38,14 @@ const Main:FunctionComponent<MainProps> = ({ size}) => {
                         <EuiPageSection className="right-section">
                             <div >
                                 <h2 className="service-title">SERVICES</h2>
-                                <SliderComponent filename="adpage.png"/>
+                                <SliderComponent autoplay={true} filename="adpage.png"/>
                             </div>
                         </EuiPageSection>
                     </EuiFlexItem>
-                </EuiFlexGroup>
+                </EuiFlexGrid>
             </EuiPageBody>
         </EuiPage>
     </>
 }
 
-export default Main
+export default ServicePage

@@ -1,0 +1,42 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slider-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    max-height: 500px;
+    max-width: 550px;
+    margin-right: 50px;
+    align-items: center;
+}
+
+
+.slider-image {
+    max-width: 300px;
+    max-height: 550px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 500px;
+    border-radius: 8px;
+    margin: auto;
+}
+
+
+@media (max-width: 480px) {
+
+    .slider-image {
+        max-width: auto;
+        max-height: 300px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 500px;
+        border-radius: 8px;
+        margin: auto;
+    }
+    
+}
