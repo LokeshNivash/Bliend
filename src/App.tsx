@@ -7,6 +7,7 @@ import MarketingPage from './components/Marketing';
 import SoftwareSolutions from './components/SoftwareSolutions';
 import ScrollingHeader from './components/ScrollingHeader';
 import TestimonialSlider from './components/TestimonialPage';
+import Footer from './components/FooterPage';
 
 
 const App: FunctionComponent = () => {
@@ -30,6 +31,9 @@ const App: FunctionComponent = () => {
         </div>
         <div className='app-page'>
           <TestimonialSlider />
+        </div>
+        <div >
+          <Footer/>
         </div>
       </div>
   );

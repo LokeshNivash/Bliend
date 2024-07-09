@@ -45,7 +45,7 @@ const AdvertisingPage = () => (
       <EuiFlexItem grow={true} className='billboard'>
         <EuiPageSection className="right-section">
             <h2 className="traditional-ad-title">TRADITIONAL ADVERTISING</h2>
-            <SliderComponent autoplay={true} filename="adpage.png" />
+            <SliderComponent autoplay={true}  />
         </EuiPageSection>
 
       </EuiFlexItem>

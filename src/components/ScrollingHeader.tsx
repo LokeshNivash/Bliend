@@ -3,11 +3,10 @@ import './ScrollingHeader.css';
 
 
 const ScrollingHeader = () => {
-    const slogan = "we specialize in transforming brands ";
     return (
         <div className="scrolling-header">
             <div className="scrolling-wrapper">
-                <p className="slogan-text">{slogan}</p>
+                <p className="slogan-text">we specialize in transforming brands</p>
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import { FunctionComponent } from 'react';
 import Slider, { Settings } from 'react-slick';
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import './SliderComponent.css';
+import './SliderComponent.css'
 
 
 const CustomNextArrow = (props: any) => {
@@ -38,29 +38,23 @@ const CustomPrevArrow = (props: any) => {
 };
 
 export interface SliderComponentProps {
-  filename: string
   autoplay: boolean
 }
 
 const SliderComponent: FunctionComponent<SliderComponentProps> = ({
-  filename,
   autoplay
 }) => {
-  const sliderImages = [
-    { id: 1, src: `/${filename}`, alt: 'Image 1', title: 'Advertising' },
-    { id: 2, src: `/OUTDOOR DISPLAY ONE.png`, alt: 'Image 2', title: 'Marketing' },
-    { id: 3, src: `/BILL_BOARD.png`, alt: 'Image 3', title: 'Solution' },
-  ];
+
 
   const adImages = [
-    { id: 1, src: `/outdoor/BILL BOARD.png`, alt: 'Image 1', title: 'Outdoor' },
-    { id: 2, src: `/outdoor/FLAGS.png`, alt: 'Image 2', title: 'Outdoor' },
-    { id: 3, src: `/outdoor/OUTDOOR DISPLAY ONE.png`, alt: 'Image 3', title: 'Outdoor' },
-    { id: 4, src: `/outdoor/OUTDOOR DISPLAY TWO.png`, alt: 'Image 4', title: 'Outdoor' },
-    { id: 5, src: `/outdoor/STANDINGS.png`, alt: 'Image 5', title: 'Outdoor' },
-    { id: 6, src: `/print/MAGAZINE ONE.png`, alt: 'Image 6', title: 'Print' },
-    { id: 7, src: `/print/MAGAZINE TWO.png`, alt: 'Image 7', title: 'Print' },
-    { id: 8, src: `/television/TELEVISION ADS.png`, alt: 'Image 8', title: 'Television' },
+    { id: 1, src: `/webp-outdoor/BILL BOARD.webp`, alt: 'Image 1', title: 'Outdoor' },
+    { id: 2, src: `/webp-outdoor/FLAGS.webp`, alt: 'Image 2', title: 'Outdoor' },
+    { id: 3, src: `/webp-outdoor/OUTDOOR DISPLAY ONE.webp`, alt: 'Image 3', title: 'Outdoor' },
+    { id: 4, src: `/webp-outdoor/OUTDOOR DISPLAY TWO.webp`, alt: 'Image 4', title: 'Outdoor' },
+    { id: 5, src: `/webp-outdoor/STANDINGS.webp`, alt: 'Image 5', title: 'Outdoor' },
+    { id: 6, src: `/webp-print/MAGAZINE ONE.webp`, alt: 'Image 6', title: 'Print' },
+    { id: 7, src: `/webp-print/MAGAZINE TWO.webp`, alt: 'Image 7', title: 'Print' },
+    { id: 8, src: `/webp-television/TELEVISION ADS.webp`, alt: 'Image 8', title: 'Television' },
   ]
 
   const settings: Settings = {
@@ -72,21 +66,24 @@ const SliderComponent: FunctionComponent<SliderComponentProps> = ({
     arrows: true,
     autoplay,
     autoplaySpeed: 2200,
+    lazyLoad: 'ondemand',
     adaptiveHeight: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />
   };
 
   return (
-<div className='slider-wrapper'>
-    <Slider {...settings}>
-      {adImages.map(image => (
-        <div className="slider-image-container" key={image.src}>
-          <img className="slider-image" src={image.src} alt={image.alt} />
-          <h1 style={{ textAlign: 'center' }}><strong>{image.title}</strong></h1>
-        </div>
-      ))}
-    </Slider>
+    <div className='slider-wrapper'>
+      <Slider {...settings}>
+        {adImages.map(image => (
+          <div className="slider-image-container" key={image.src}>
+            <img className="slider-image" src={image.src} alt={image.alt}
+              loading='lazy'
+            />
+            <h1 style={{ textAlign: 'center' }}><strong>{image.title}</strong></h1>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }
