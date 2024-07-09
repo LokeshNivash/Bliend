@@ -53,12 +53,6 @@ const ServicePage: FunctionComponent<ServicePageProps> = ({ size }) => {
                         </EuiPageSection>
                     </EuiFlexItem>
                     <EuiFlexItem grow={true}>
-                        {/* <EuiPageSection className="right-section ">
-                            <div >
-                                <h2 className="service-title ">SERVICES</h2>
-                                <SliderComponent autoplay={true} filename="adpage.png" />
-                            </div>
-                        </EuiPageSection> */}
                                  <div className="slider-component-wrapper">
                                 <h2 className="service-title">SERVICES</h2>
                                 <SliderComponent autoplay={true} filename="adpage.png" />

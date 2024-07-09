@@ -11,7 +11,6 @@ import ScrollingHeader from './components/ScrollingHeader';
 const App: FunctionComponent = () => {
   return (
       <div>
-
         <div className="app-page">
           <HeaderComponent />
           <div style={{height:"50px",width:'auto'}}></div>
@@ -25,7 +24,6 @@ const App: FunctionComponent = () => {
         <div className='app-page'>
           <MarketingPage/>
         </div>
-
         <div>
           <SoftwareSolutions />
         </div>
