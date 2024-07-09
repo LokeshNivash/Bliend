@@ -1,25 +1,43 @@
-import { EuiFlexGrid, EuiFlexItem, EuiPage, EuiPageBody, EuiPageSection } from "@elastic/eui"
+import {  EuiFlexGroup, EuiFlexItem, EuiPage, EuiPageBody, EuiPageSection } from "@elastic/eui"
 import { FunctionComponent } from "react"
-import './ServicePage.css'
 import SliderComponent from "./SliderComponent"
+import { TypeAnimation } from 'react-type-animation';
+import './ServicePage.css'
 
-export interface ServicePageProps{
-    size?:number
+export interface ServicePageProps {
+    size?: number
 }
-const ServicePage:FunctionComponent<ServicePageProps> = ({ size}) => {
+const ServicePage: FunctionComponent<ServicePageProps> = ({ size }) => {
     return <>
-        <EuiPage  style={{ backgroundColor: 'transparent',paddingBottom:'200px' }}  id="services-section" >
-            <EuiPageBody  component="div">
-                <EuiFlexGrid responsive={true} columns={2} direction="row" gutterSize="none">
-                    <EuiFlexItem grow={false}>
+        <EuiPage style={{ backgroundColor: 'transparent', paddingBottom: '200px' }} 
+        id="services-section"
+         className="slide-fade-in">
+            <EuiPageBody component="div">
+                <EuiFlexGroup responsive={true} direction="row" gutterSize="none">
+                    <EuiFlexItem grow={true}>
                         <EuiPageSection className="left-section">
-                            <div className="box">
-                                <div style={{ display: 'flex', justifyContent: 'start',alignItems:'center',paddingTop:'0' }}>
-                                    <img src="/logo.png" alt="Company Logo" style={{width:'50px',height:'50px',marginRight:'10px'}} />
-                                    <h2 className="title">BLIEND</h2>
+                            <div className="box ">
+                                <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', paddingTop: '0' }}>
+                                    <img src="/logo.png" alt="Company Logo" style={{ width: '50px', height: '50px', marginRight: '10px' }} className="icon-bounce" />
+                                    <h2 className="title fade-in">BLIEND</h2>
                                 </div>
-                                <h1 className="title">WHY YOU NEED US</h1>
-                                <p className="summary">
+                                <h2 className="title">
+                                    <TypeAnimation
+                                        cursor={true}
+                                        sequence={[
+                                            'WHY YOU NEED US',
+                                            2000,
+                                            'WHY YOU NEED BLIEND',
+                                            2000,
+                                            'HERE WE GO...',
+                                            2000
+                                        ]}
+                                        wrapper="span"
+                                        speed={50}
+                                        repeat={Infinity}
+                                    />
+                                </h2>
+                                <p className="summary fade-in">
                                     we specialize in transforming brands through creativity
                                     and innovation. Our comprehensive services encompass
                                     advertising, marketing, and software solutions, tailored to
@@ -29,20 +47,24 @@ const ServicePage:FunctionComponent<ServicePageProps> = ({ size}) => {
                                     resonate with audiences and drive success. From concept
                                     to execution, we are dedicated to delivering exceptional
                                     results that elevate your brand and set it apart in a
-                                    competitive market.                                
+                                    competitive market.
                                 </p>
                             </div>
                         </EuiPageSection>
                     </EuiFlexItem>
-                    <EuiFlexItem grow={false}>
-                        <EuiPageSection className="right-section">
+                    <EuiFlexItem grow={true}>
+                        {/* <EuiPageSection className="right-section ">
                             <div >
-                                <h2 className="service-title">SERVICES</h2>
-                                <SliderComponent autoplay={true} filename="adpage.png"/>
+                                <h2 className="service-title ">SERVICES</h2>
+                                <SliderComponent autoplay={true} filename="adpage.png" />
                             </div>
-                        </EuiPageSection>
-                    </EuiFlexItem>
-                </EuiFlexGrid>
+                        </EuiPageSection> */}
+                                 <div className="slider-component-wrapper">
+                                <h2 className="service-title">SERVICES</h2>
+                                <SliderComponent autoplay={true} filename="adpage.png" />
+                                </div>
+                                </EuiFlexItem>
+                </EuiFlexGroup>
             </EuiPageBody>
         </EuiPage>
     </>

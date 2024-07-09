@@ -1,153 +1,18 @@
-.left-section,
-.right-section {
-  background-color: rgba(255, 255, 255, 0.1);
-  max-width: fit-content;
-  max-height: auto;
-  border-radius: 8px;
+.service-title{
+  font-size: 40px;
   text-align: center;
-  margin: 0 auto;
 }
 
-.left-section .box,
-.right-section .box {
-  max-width: auto;
-  width: 100%;
-}
-
-.title {
-  font-size: 50px;
-  text-align: start;
-}
-
-.service-title {
-  margin-top: 100px;
-  font-size: 50px;
-  text-align: center;
+.title{
+  font-size: 40px;
 }
 
 .summary {
-  font-size: 30px;
+  font-size: 28px;
   text-align: start;
 }
 
-#services-section {
-  height: auto;
+.box{
+  padding-right: 50px;
 }
 
-/* Tablet view */
-@media (max-width: 768px) {
-  .EuiFlexGrid {
-    flex-direction: column;
-  }
-
-  .title,
-  .service-title,
-  .summary {
-    text-align: center;
-  }
-
-  .slider-image {
-    max-width: 100%;
-    max-height: auto;
-    width: 100%;
-    height: auto;
-  }
-
-  .slider-container {
-    margin-right: 0;
-  }
-
-  .left-section .right-section{
-    margin: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .EuiFlexGrid {
-    flex-direction: column;
-  }
-
-  .left-section,
-  .right-section {
-    max-width: 80%;
-  }
-
-  .title,
-  .service-title,
-  .summary {
-    text-align: center;
-    align-items: center;
-    justify-content: start;
-    max-width: 100%;
-    padding-right: 20px
-  }
-
-  .slider-image {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .left-section .box,
-  .right-section .box {
-    width: 90%;
-    word-wrap: break-word;
-    white-space: normal;
-  }
-}
-
-@media (max-width: 480px) {
-  .EuiFlexGrid {
-    flex-direction: column;
-  }
-
-  .title,
-  .service-title {
-    font-size: 30px;
-    text-align: center;
-    max-width: 100%;
-    padding-right: 50px;
-  }
-
-  .summary {
-    font-size: 18px;
-    text-align: start;
-    margin-right: 20px;
-  }
-
-  .left-section,
-  .right-section {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .right-section{
-    align-items: center;
-    text-align: center;
-    max-width: 60%;
-  }
-
-  .slider-image {
-    max-width: 50%;
-    height: auto;
-  }
-
-  .left-section .box,
-  .right-section .box {
-    width: 60%;
-    align-items: center;
-    word-wrap: break-word;
-    white-space: normal;
-  }
-}
-
-@media (max-width: 320px) {
-
-  .title,
-  .service-title {
-    font-size: 30px;
-  }
-
-  .summary {
-    font-size: 18px;
-  }
-}

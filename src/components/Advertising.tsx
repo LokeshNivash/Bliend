@@ -8,10 +8,11 @@ const AdvertisingPage = () => (
   <EuiPage restrictWidth={false} hidden={true}>
     <EuiPageBody>
       
-    <div className="header">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" transform='rotate(180)' style={{ minWidth: '100%' }}>
+    <div className="header" id='advertisement-section'>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" transform='rotate(180)' 
+      style={{ minWidth: '100%',marginTop:"-20px" }}>
         <path fill="url(#grad1)" fillOpacity="1" d="M0,192L48,165.3C96,139,192,85,288,96C384,107,480,181,576,181.3C672,181,768,107,864,101.3C960,96,1056,160,1152,176C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        <defs>
+        <defs >
           <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style={{
               stopColor: "rgba(2,74,174,0.9842787456779587)",
@@ -27,7 +28,7 @@ const AdvertisingPage = () => (
 
 
     </div >
-    <EuiFlexGroup id='advertisement-section'>
+    <EuiFlexGroup >
       <EuiFlexItem grow={true} className='leftbox'>
         <h1 className="ad-title">ADVERTISEMENTS</h1>
         <p className="ad-summary">
@@ -40,18 +41,17 @@ const AdvertisingPage = () => (
           endeavors.
         </p>
       </EuiFlexItem>
-      <EuiFlexItem grow={false} className='billboard'>
+      
+      <EuiFlexItem grow={true} className='billboard'>
         <EuiPageSection className="right-section">
-          <div >
             <h2 className="traditional-ad-title">TRADITIONAL ADVERTISING</h2>
             <SliderComponent autoplay={true} filename="adpage.png" />
-          </div>
         </EuiPageSection>
 
       </EuiFlexItem>
     </EuiFlexGroup>
 
-    <div style={{ marginTop: '150px',marginBottom:'0' }}>
+    <div style={{ marginTop: '150px',marginBottom:'-5px' }}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 70 1340 270" transform='rotate(180)' style={{ width: '100%' }}>
         <defs>
           <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">

@@ -1,5 +1,3 @@
-
-
 .billboard {
     margin-top: -100px;
     height: auto;
@@ -29,10 +27,13 @@
     color: #C95FA7;
 }
 
-.leftbox {
-    max-width: 50%;
-    margin-left: 50px;
+.ad-title,
+.ad-summary,
+.traditional-ad-title {
+    text-align: center;
+    text-wrap: wrap;
 }
+
 
 .ad-title {
     text-align: center;
@@ -44,8 +45,6 @@
 .ad-summary {
     width: auto;
     font-size: 40px;
-    text-align: start;
-    padding-left: 100px;
 }
 
 .right-section {
@@ -59,84 +58,68 @@
 
 @media (max-width: 768px) {
     .EuiFlexGroup {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
-    .ad-title, .ad-summary, .traditional-ad-title {
-        text-align: center; 
-    }
 
     .ad-title {
         font-size: 40px;
     }
 
     .ad-summary {
-        font-size: 30px;
-        padding-left: 0;
+        font-size: 23px;
         text-align: center;
     }
 
-    .slider-image {
-        max-width: 100%;
-        max-height: auto;
-        width: 100%;
-        height: auto;
-    }
 
     .slider-container {
         margin-right: 0;
     }
 
     .leftbox {
-        max-width: 100%;
-        margin: 0 auto; 
+        margin: 0 auto;
         padding: 20px;
     }
 
     .right-section {
         max-width: 100%;
-        margin: 0 auto; 
-        padding: 20px;
+    }
+
+    .billboard {
+        width: 40%;
     }
 }
 
 
 @media (max-width: 600px) {
-    .EuiFlexGroup {
-        flex-direction: column; 
-        align-items: center;
-    }
-
-    .ad-title, .ad-summary, .traditional-ad-title {
-        text-align: center; 
-    }
-
     .ad-title {
         font-size: 30px;
     }
 
-    .ad-summary {
-        font-size: 20px;
-        padding-left: 0;
-        text-align: center;
-    }
 
     .slider-image {
         max-width: 100%;
         height: auto;
     }
 
-    .leftbox, .right-section {
+    .leftbox,
+    .right-section {
         width: 100%;
-        padding: 10px; 
-        text-align: center; 
+        padding: 10px;
+        text-align: center;
     }
 
-    .leftbox .box, .right-section .box {
-        width: 100%; 
-        word-wrap: break-word; 
+    .leftbox .box,
+    .right-section .box {
+        width: 100%;
+        word-wrap: break-word;
         white-space: normal;
+    }
+
+    .leftbox {
+        margin: 0;
+        height: auto;
     }
 }
 
@@ -145,10 +128,6 @@
         font-size: 30px;
     }
 
-    .ad-summary {
-        font-size: 20px;
-        padding-bottom: 30px;
-    }
 
     .traditional-ad-title {
         font-size: 30px;

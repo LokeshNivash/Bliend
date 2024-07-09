@@ -92,7 +92,7 @@ const HeaderComponent: FunctionComponent = () => {
                         />
                     </EuiFlexItem>
                     <EuiFlexItem grow={false} className="logo-item">
-                        <EuiHeaderLogo iconType="logoElastic"><p style={{ color: 'white' }}>Bliend</p></EuiHeaderLogo>
+                        <EuiHeaderLogo className='text-pulse' iconType="/logo.png"><p style={{ color: 'white' }}></p></EuiHeaderLogo>
                     </EuiFlexItem>
                     <EuiFlexItem className="nav-items">
                         <EuiFlexGroup justifyContent="spaceAround">
