@@ -12,10 +12,10 @@ import './FooterPage.css';
 const Footer = () => {
     return (
         <div className="footer">
-            <EuiFlexGroup responsive wrap alignItems="center" justifyContent="spaceBetween">
+            <EuiFlexGroup id='footer-section' responsive wrap alignItems="center" justifyContent="spaceBetween">
                 <EuiFlexItem grow={false} >
                     <div className='footer-logo-item'>
-                    <img src="/logo.png" alt="Company Logo" className="footer-logo" />
+                    <img src="/logo_new.png" alt="Company Logo" className="footer-logo" />
                     </div>
                 </EuiFlexItem>
 

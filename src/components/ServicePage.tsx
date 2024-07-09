@@ -18,7 +18,7 @@ const ServicePage: FunctionComponent<ServicePageProps> = ({ size }) => {
                         <EuiPageSection className="left-section">
                             <div className="box ">
                                 <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', paddingTop: '0' }}>
-                                    <img src="/logo.png" alt="Company Logo" style={{ width: '50px', height: '50px', marginRight: '10px' }} className="icon-bounce" />
+                                    <img src="/logo_new.png" alt="Company Logo" style={{ width: '50px', height: '50px', marginRight: '10px' }} className="icon-bounce" />
                                     <h2 className="title fade-in">BLIEND</h2>
                                 </div>
                                 <h2 className="title">

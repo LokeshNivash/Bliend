@@ -3,11 +3,11 @@ import './App.css';
 import AdvertisingPage from './components/Advertising';
 import HeaderComponent from './components/Header';
 import ServicePage from './components/ServicePage';
-import MarketingPage from './components/Marketing';
 import SoftwareSolutions from './components/SoftwareSolutions';
 import ScrollingHeader from './components/ScrollingHeader';
-import TestimonialSlider from './components/TestimonialPage';
+import TestimonialPage from './components/TestimonialPage';
 import Footer from './components/FooterPage';
+import MarketingPage from './components/Marketing';
 
 
 const App: FunctionComponent = () => {
@@ -20,21 +20,24 @@ const App: FunctionComponent = () => {
           <div style={{height:"5px",width:'auto'}}></div>
           <ServicePage />
         </div>
+
         <div >
         <AdvertisingPage/>
         </div>
         <div className='app-page'>
-          <MarketingPage/>
+          <MarketingPage />
         </div>
         <div>
           <SoftwareSolutions />
         </div>
         <div className='app-page'>
-          <TestimonialSlider />
+          <TestimonialPage />
+          <div style={{height:"50px",width:'auto'}}></div>
         </div>
         <div >
           <Footer/>
         </div>
+        
       </div>
   );
 }

@@ -44,8 +44,8 @@ const settings: Settings = {
     cssEase: "linear",
 };
 
-const TestimonialSlider = () => (
-    <EuiPage style={{ backgroundColor: 'transparent', height: '100vh', overflow: 'hidden' }}>
+const TestimonialPage = () => (
+    <EuiPage style={{ backgroundColor: 'transparent', overflow: 'hidden' }}>
         <EuiPageBody>
             <div>
                 <h1 style={{ textAlign: 'center' }}>
@@ -104,4 +104,4 @@ const TestimonialSlider = () => (
     </EuiPage>
 );
 
-export default TestimonialSlider;
+export default TestimonialPage;

@@ -55,6 +55,14 @@
     font-weight: 800;
 }
 
+.gradient{
+    background:  linear-gradient(90deg, rgba(2,74,174,0.98) 12%, rgba(132,23,236,0.9) 39%, rgba(92,14,167,0.9) 72%, rgba(28,13,56,0.99) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
 
 @media (max-width: 768px) {
     .EuiFlexGroup {

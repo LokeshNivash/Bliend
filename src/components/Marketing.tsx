@@ -1,112 +1,97 @@
-import {
-    EuiFlexGroup,
-    EuiFlexItem,
-    EuiImage,
-    EuiPage,
-    EuiPageBody,
-    EuiText,
-} from '@elastic/eui';
-import '@elastic/eui/dist/eui_theme_light.css';
-import './Marketing.css';
+import { EuiFlexGroup, EuiFlexItem, EuiImage, EuiPage, EuiPageBody } from "@elastic/eui"
+import './Marketing.css'
 
 const MarketingPage = () => {
-     
+    const digitalIcons=[
+        { alt: "SEO", src: "/webp-icons/SEO.webp", text: "SEO" },
+        { alt: "SEM", src: "/webp-icons/SEM.webp", text: "SEM" },
+        { alt: "Content", src: "/webp-icons/CONTENT.webp", text: "CONTENT" },
+        { alt: "Social Media", src: "/webp-icons/SOCIAL MEDIA.webp", text: "SOCIAL MEDIA" },
+        { alt: "Influencers", src: "/webp-icons/INFLUENCER.webp", text: "INFLUENCERS" },
+    ]
     return <>
-        <EuiPage  style={{ background: 'transparent', overflow: 'hidden' }}
-            restrictWidth={false} hidden={true}>
-            <EuiPageBody >
-                <EuiFlexGroup id='marketing-section' justifyContent="center" alignItems="center" >
+        <EuiPage style={{ background: 'transparent', overflow: 'hidden' }}>
+            <EuiPageBody id="marketing-section">
+                <EuiFlexGroup  justifyContent="center" alignItems="center" responsive wrap>
                     <EuiFlexItem grow={false}>
-                        <h1 className="marketing-title">MARKETING</h1>
-                    </EuiFlexItem>
-                </EuiFlexGroup>
-
-                <EuiFlexGroup   gutterSize='xl' justifyContent="center" alignItems="center" wrap responsive
-                    className="section-container">
-                    <EuiFlexItem grow={false} className="service-item">
-                        <EuiImage style={{
-                            height: '600px',
-                            paddingBottom: '50px',
-                            width: 'auto',
-                            minWidth: '350px',
-                            transform: "perspective(200px) rotate3D(0, 1, 0, 10deg)"
-                        }} alt="tilted-phone" src="/outdoor/OUTDOOR DISPLAY TWO.png" />
+                        <div>
+                            <EuiImage style={{
+                                height: '600px',
+                                paddingBottom: '50px',
+                                width: 'auto',
+                                margin: '0 auto',
+                                transform: "perspective(200px) rotate3D(0, 1, 0, 10deg)"
+                            }} alt="tilted-phone" src="/webp-outdoor/OUTDOOR DISPLAY TWO.webp" />
+                        </div>
                     </EuiFlexItem>
                     <EuiFlexItem>
-                        <EuiFlexGroup gutterSize='xl' justifyContent="center" alignItems="center" wrap responsive className="services-container">
-                                <div className="digital-container">
-                                    <EuiText className="digital-title">
-                                        <h2 >DIGITAL</h2>
-                                    </EuiText>
-                                    <img src="/icons/RIGHT SCROLL BUTTON.png" 
-                                    alt="Scroll Button" 
-                                    className="scroll-button" />
-                                </div>
-                             
-                                    {[
-                                        { alt: "SEO", src: "/icons/SEO.png", text: "SEO" },
-                                        { alt: "SEM", src: "/icons/SEM.png", text: "SEM" },
-                                        { alt: "Content", src: "/icons/CONTENT.png", text: "CONTENT" },
-                                        { alt: "Social Media", src: "/icons/SOCIAL MEDIA.png", text: "SOCIAL MEDIA" },
-                                        { alt: "Influencers", src: "/icons/INFLUENCER.png", text: "INFLUENCERS" },
-                                    ].map((item, index) => (
-                                        <EuiFlexItem grow={false} className="service-item" key={index}>
-                                            <EuiImage style={{ width: '60px', height: 'auto' }} 
-                                            hasShadow
-                                             alt={item.alt} src={item.src} />
-                                            <EuiText textAlign="center" className="service-text">
-                                                <p>{item.text}</p>
-                                            </EuiText>
-                                        </EuiFlexItem>
-                                    ))}
-                               
+                        <div className="marketing-section">
+                            <h2>MARKETING</h2>
+                            <p>Software development is the heart of modern innovation, transforming creative ideas into dynamic digital experiences. It enables the creation of customized solutions that cater to unique business needs, enhancing efficiency and user engagement. By integrating cutting-edge technologies, software development empowers brands to stay ahead in a competitive market. It also fosters collaboration, allowing creative minds to bring their visions to life through seamless integration. Ultimately, it drives the future of digital creativity, blending technical expertise with artistic expression.</p>
+                        </div>
+                        <div className="digital-scroll">
+                            <h2>Digital</h2>
+                            <EuiImage style={{
+                                height: '100px',
+                                width: 'auto',
+                                margin: '0 auto',
+                            }} alt="Scroll Button"
+                                src="/webp-icons/RIGHT SCROLL BUTTON.webp" />
+                        </div>
+                        <EuiFlexGroup responsive wrap className="social-contents">
+                            {digitalIcons.map((item, index) => (
+                                <EuiFlexItem grow={true} key={index}>
+                                    <EuiImage style={{ width: '60px', height: 'auto' }}
+                                        hasShadow
+                                        alt={item.alt} src={item.src} />
+                                    <p style={{ textAlign: 'center' }}>{item.text}</p>
+                                </EuiFlexItem>
+                            ))}
                         </EuiFlexGroup>
                     </EuiFlexItem>
                 </EuiFlexGroup>
-
-                {/* Direct Promotions Section */}
-                <EuiFlexGroup justifyContent="center" alignItems="center" wrap responsive className="section-container">
-                    <EuiFlexItem grow={false} className="service-item">
-                        <div className="digital-container-bottom">
-                            <EuiText className="digital-title-bottom">
-                                <h2>DIRECT PROMOTIONS</h2>
-                            </EuiText>
-                            <img src="/icons/LEFT SCROLL BUTTON.png" alt="Scroll Button" className="scroll-button" />
+            </EuiPageBody>
+        </EuiPage>
+        <EuiPage style={{ background: 'transparent', overflow: 'hidden' }}>
+            <EuiPageBody>
+                <EuiFlexGroup justifyContent="center" alignItems="center" responsive wrap>
+                    <EuiFlexItem>
+                        <div className="digital-scroll">
+                            <h2>DIRECT PROMOTIOS</h2>
+                            <EuiImage style={{
+                                height: '100px',
+                                width: 'auto',
+                                margin: '0 auto',
+                            }} alt="Scroll Button"
+                                src="/webp-icons/RIGHT SCROLL BUTTON.webp" />
                         </div>
 
-                        <EuiFlexGroup justifyContent="center" alignItems="center" className="custom-section">
-                            <EuiFlexItem grow={false} className="icon-section">
-                                <EuiImage
-                                    src="/icons/SOCIAL MEDIA.png"
-                                    alt="Icon"
-                                    style={{ width: '200px', height: 'auto' }}
-                                />
-                            </EuiFlexItem>
-                            <EuiFlexItem grow={false} className="text-section">
-                                <EuiText className="list-text">
-                                    <ul style={{ listStyle: 'none' }}>
-                                        <li>SALES</li>
-                                        <li>CONTESTS</li>
-                                        <li>CAMPAIGNS</li>
-                                    </ul>
-                                </EuiText>
-
-                            </EuiFlexItem>
-                        </EuiFlexGroup>
-
-
+                        <div className="responsive-container">
+                            <EuiImage
+                                src="/webp-icons/SOCIAL MEDIA.webp"
+                                alt="Icon"
+                                style={{ width: '200px', height: 'auto', flex: '0 0 auto' }}
+                            />
+                            <div className="list-items" style={{ flex: '1 1 auto', paddingLeft: '16px' }}>
+                                <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+                                    <li>SALES</li>
+                                    <li>CONTESTS</li>
+                                    <li>CAMPAIGNS</li>
+                                </ul>
+                            </div>
+                        </div>
 
                     </EuiFlexItem>
-                    <EuiFlexItem>
-                        <EuiFlexItem grow={false} className="service-item-down-img">
+                    <EuiFlexItem grow={false}>
+                        <div style={{alignItems:'end',paddingRight:'150px'}}>
                             <EuiImage style={{
-                                height: '500px',
+                                height: '600px',
                                 paddingBottom: '50px',
-                                minWidth: '200px',
                                 width: 'auto',
-                                transform: "perspective(200px) rotate3D(0, -10, 20, 10deg)"
-                            }} alt="tilted-phone" src="/outdoor/OUTDOOR DISPLAY TWO.png" />
-                        </EuiFlexItem>
+                                margin: '0 auto',
+                                transform: "perspective(200px) rotate3D(0, -10, 20, 20deg)"
+                            }} alt="tilted-phone" src="/webp-outdoor/OUTDOOR DISPLAY TWO.webp" />
+                        </div>
                     </EuiFlexItem>
                 </EuiFlexGroup>
             </EuiPageBody>
@@ -114,5 +99,4 @@ const MarketingPage = () => {
     </>
 }
 
-
-export default MarketingPage;
+export default MarketingPage

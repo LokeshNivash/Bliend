@@ -92,7 +92,7 @@ const HeaderComponent: FunctionComponent = () => {
                         />
                     </EuiFlexItem>
                     <EuiFlexItem grow={false} className="logo-item">
-                        <EuiHeaderLogo className='text-pulse' iconType="/logo.png"><p style={{ color: 'white' }}></p></EuiHeaderLogo>
+                        <EuiHeaderLogo className='text-pulse' iconType="/logo_new.png" ></EuiHeaderLogo>
                     </EuiFlexItem>
                     <EuiFlexItem className="nav-items">
                         <EuiFlexGroup justifyContent="spaceAround">
@@ -112,7 +112,9 @@ const HeaderComponent: FunctionComponent = () => {
                                 }}>Marketing</HeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem grow={false}>
-                                <HeaderLink >Contact Us</HeaderLink>
+                                <HeaderLink onClick={() => {
+                                    document.getElementById('footer-section')?.scrollIntoView({ behavior: 'smooth' })
+                                }}>Contact Us</HeaderLink>
                             </EuiFlexItem>
                         </EuiFlexGroup>
                     </EuiFlexItem>
@@ -161,7 +163,10 @@ const HeaderComponent: FunctionComponent = () => {
                                 </EuiHeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem>
-                                <EuiHeaderLink className='header-link' href="#" onClick={closeFlyout}>
+                                <EuiHeaderLink className='header-link' href="#" onClick={() => {
+                                    document.getElementById('footer-section')?.scrollIntoView({ behavior: 'smooth' })
+                                    closeFlyout()
+                                }}>
                                     Contact Us
                                 </EuiHeaderLink>
                             </EuiFlexItem>

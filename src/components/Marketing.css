@@ -1,213 +1,62 @@
-.header {
-    margin-top: 20px;
+.marketing-section{
+    width: 100%;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-left: 50px;
 }
 
-.section-container {
-    margin-top: 30px;
-    text-align: center;
+.marketing-section p{
+    padding-right: 150px;
 }
 
-.marketing-title {
-    font-size: 80px;
-    font-style: italic;
-    font-weight: bold;
-    color: white;
-}
 
-.digital-container {
+.digital-scroll{
+    padding-left: 50px;
     display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
+    align-items: center;
 }
 
-.digital-container-bottom {
+.digital-scroll h2{
+    font-size: 2rem;
+}
+
+
+
+.responsive-container {
     display: flex;
-    text-align: center;
-    justify-content: start;
-    margin-bottom: 20px;
-    margin-left: 100px;
-}
-
-
-
-.digital-title h2 {
-    font-size: 40px;
-    font-weight: bold;
-    color: white;
-}
-
-.scroll-button {
-    width: 50px;
-    height: auto;
-    margin-left: 10px;
-}
-
-.services-container {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.service-item {
-    margin: 5px;
-}
-
-.service-text p {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-}
-
-.custom-section {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.icon-section {
-    margin-right: -100px;
-}
-
-.text-section .list-text {
-    font-size: 30px;
-    color: white;
-    text-align: left;
-}
-
-.text-section li{
-    padding: 20px;
-}
-
-@media (max-width: 1200px) {
-    .marketing-title {
-        font-size: 40px;
-        text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .list-items {
+    flex: 1 1 auto;
+    padding-left: 16px;
+    font-size: 1.5rem;
+  }
+  
+  .list-items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .responsive-container {
+      flex-direction: column;
+      align-items: center;
     }
-
-    .digital-title h2 {
-        font-size: 35px;
-    }
-
-    .scroll-button {
-        width: 40px;
-    }
-
-    .service-text p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 768px) {
-    .marketing-title {
-        font-size: 35px;
-    }
-
-    .digital-title h2 {
-        font-size: 30px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-top: -4px;
-    }
-
-    .scroll-button {
-        width: 35px;
-        height: auto;
-        align-items: center;
-    }
-
-    .service-text p {
-        font-size: 12px;
-    }
-
-    .service-item{
-        align-items: center;
-    }
-
-    .text-section{
-        align-items: center;
-        text-align: center;
-    }
-
-    .service-item-down-img{
-        align-items: center;
-    }
-
-    .services-container{
-        align-items: center;
-    }
-
-    .digital-container{
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-
-}
-
-@media (max-width: 600px) {
-    .marketing-title {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .digital-title h2 {
-        font-size: 25px;
-    }
-
-    .scroll-button {
-        width: 30px;
-    }
-
-    .services-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .service-item {
-        flex: 1 0 30%;
-        margin: 5px;
-    }
-
-    .service-text p {
-        font-size: 10px;
-    }
-
-    .custom-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .icon-section {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .text-section .list-text {
-        font-size: auto;
-        text-align: center;
-        align-items: center;
-    }
-    .list-text{
-        margin-left: -55px;
-        margin-top: -100px;
-    }
-
-    .digital-container-bottom {
-        display: block;
-        text-align: center;
-        justify-content: start;
-        margin:0
-    }
-
     
-.service-item-down-img{
-    align-items: end;
-}
+    .list-items {
+      padding-left: 0;
+      text-align: center;
+    }
     
-}
-
-
-.service-item-down-img{
-    align-items: end;
-}
+    .list-items ul {
+      padding: 0;
+    }
+    
+    .list-items li {
+      padding: 8px 0;
+    }
+  }
+  
