@@ -44,8 +44,6 @@ export interface SliderComponentProps {
 const SliderComponent: FunctionComponent<SliderComponentProps> = ({
   autoplay
 }) => {
-
-
   const adImages = [
     { id: 1, src: `/webp-outdoor/BILL BOARD.webp`, alt: 'Image 1', title: 'Outdoor' },
     { id: 2, src: `/webp-outdoor/FLAGS.webp`, alt: 'Image 2', title: 'Outdoor' },
