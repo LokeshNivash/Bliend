@@ -50,7 +50,7 @@ const AdvertisingPage = () => (
           </EuiFlexItem>
         </EuiFlexGroup>
 
-        <div style={{ marginTop: '150px', marginBottom: '-5px' }}>
+        <div style={{  marginBottom: '-5px' }}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 70 1340 270" transform='rotate(180)' style={{ width: '100%' }}>
             <defs>
               <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
