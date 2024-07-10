@@ -9,6 +9,20 @@
     padding-right: 150px;
 }
 
+.marketing-mobile-title{
+  display: none;
+}
+
+@media (max-width: 790px) {
+  .marketing-section h2{
+    display: none;
+  }
+
+  .marketing-mobile-title{
+    display: block;
+  }
+}
+
 
 .digital-scroll{
     padding-left: 50px;

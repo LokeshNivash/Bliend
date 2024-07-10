@@ -20,25 +20,6 @@
     color: #ffd700;
 }
 
-/* @media (max-width: 593px) {
-    .nav-items {
-        display: none;
-    }
-
-    .login-item {
-        display: none;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-}
-
-@media (min-width: 594px) {
-    .menu-icon {
-        display: none;
-    }
-} */
 
 .flyout {
     color: white;

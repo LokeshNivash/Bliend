@@ -1,19 +1,17 @@
-import React from 'react';
-import Slider, { Settings } from 'react-slick';
 import {
     EuiCard,
     EuiFlexGroup,
     EuiFlexItem,
-    EuiText,
-    EuiSpacer,
     EuiPage,
     EuiPageBody,
+    EuiText
 } from '@elastic/eui';
+import '@elastic/eui/dist/eui_theme_light.css';
+import Slider, { Settings } from 'react-slick';
+import { TypeAnimation } from 'react-type-animation';
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import '@elastic/eui/dist/eui_theme_light.css';
-import './TestimonialPage.css'
-import { TypeAnimation } from 'react-type-animation';
+import './TestimonialPage.css';
 
 const testimonials = [
     {
@@ -54,12 +52,10 @@ const TestimonialPage = () => (
                         sequence={[
                             'Hear What Our Happy Clients Are Saying!',
                             2000,
-                            '',
+                            'Client Success Stories..',
                             2000,
-                             'Client Success Stories..',
-                             2000,
-                             'Why Clients Love Working with Us',
-                             2000
+                            'Why Clients Love Working with Us',
+                            2000
                         ]}
                         wrapper="span"
                         speed={80}

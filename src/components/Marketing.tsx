@@ -14,6 +14,7 @@ const MarketingPage = () => {
             <EuiPageBody id="marketing-section">
                 <EuiFlexGroup  justifyContent="center" alignItems="center" responsive wrap>
                     <EuiFlexItem grow={false}>
+                        <h2 className="marketing-mobile-title" style={{fontSize:'5vw',textAlign:'center'}}>MARKETING</h2>
                         <div>
                             <EuiImage style={{
                                 height: '600px',
