@@ -1,6 +1,7 @@
 import {
     EuiFlexGroup,
     EuiFlexItem,
+    EuiHeaderLink,
     EuiIcon,
     EuiLink,
     EuiSpacer,
@@ -23,25 +24,33 @@ const Footer = () => {
                     <EuiFlexGroup>
                         <EuiFlexItem grow={false}>
                             <EuiText >
-                                <EuiLink href="#" className="footer-link">Home</EuiLink>
+                                <p onClick={()=>{
+                                    document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })
+                                }} className="footer-link">Services</p>
                             </EuiText>
                         </EuiFlexItem>
                         <EuiFlexItem grow={false}>
 
                             <EuiText>
-                                <EuiLink href="#" className="footer-link">Services</EuiLink>
+                                <p onClick={()=>{
+                                    document.getElementById('advertisement-section')?.scrollIntoView({ behavior: 'smooth' })
+                                }} className="footer-link">Advertisement</p>
                             </EuiText>
                         </EuiFlexItem>
                         <EuiFlexItem grow={false}>
 
                             <EuiText>
-                                <EuiLink href="#" className="footer-link">Solutions</EuiLink>
+                                <p onClick={()=>{
+                                    document.getElementById('marketing-section')?.scrollIntoView({ behavior: 'smooth' })
+                                }} className="footer-link">Marketing</p>
                             </EuiText>
                         </EuiFlexItem>
                         <EuiFlexItem grow={false}>
 
                             <EuiText>
-                                <EuiLink href="/contact" className="footer-link">Contact</EuiLink>
+                                <p onClick={()=>{
+                                    document.getElementById('software-solution-section')?.scrollIntoView({ behavior: 'smooth' })
+                                }} className="footer-link">Solutions</p>
                             </EuiText>
                         </EuiFlexItem>
                     </EuiFlexGroup>
@@ -51,23 +60,23 @@ const Footer = () => {
                     <EuiFlexGroup responsive  justifyContent='center'>
                     <div className="footer-social">
                         <EuiFlexItem grow={false}>
-                            <EuiLink href="/services" className="footer-link">
+                            <EuiLink href="https://www.facebook.com/profile.php?id=61562183645720&mibextid=ZbWKwL" className="footer-link">
                                 <EuiIcon type="/brandLogos/facebook.png" size="xl" />
                             </EuiLink>
                         </EuiFlexItem>
                         <EuiFlexItem grow={false}>
-                            <EuiLink href="/services" className="footer-link">
+                            <EuiLink href="https://x.com/bliendservices?t=lGQEPTTjH_KLK-vJhxXzRQ&s=09" className="footer-link">
                                 <EuiIcon type="/brandLogos/twitter.png" size="xl" />
                             </EuiLink>
                         </EuiFlexItem>
                         <EuiFlexItem grow={false}>
-                            <EuiLink href="/services" className="footer-link">
-                                <EuiIcon type="/brandLogos/linkedin.png" size="xl" />
+                            <EuiLink href="https://www.instagram.com/bliendenterprises?igsh=MXJ5dW15ejB4dGlycg==" className="footer-link">
+                                <EuiIcon type="/brandLogos/instagram.png" size="xl" />
                             </EuiLink>
                         </EuiFlexItem>
                         <EuiFlexItem grow={false}>
-                            <EuiLink href="/services" className="footer-link">
-                                <EuiIcon type="/brandLogos/instagram.png" size="xl" />
+                            <EuiLink href="https://pin.it/XiQ4pLpQc" className="footer-link">
+                                <EuiIcon type="/brandLogos/pinterest.png" size="xl" />
                             </EuiLink>
                         </EuiFlexItem>
                         </div>
@@ -80,7 +89,7 @@ const Footer = () => {
                         <br />
                         <EuiLink href="mailto:info@company.com" className="footer-link">info@company.com</EuiLink>
                         <br />
-                        <EuiLink href="tel:+1234567890" className="footer-link">+1 234 567 890</EuiLink>
+                        <EuiLink href="tel:+1234567890" className="footer-link">+91 93448 24039</EuiLink>
                     </EuiText>
                 </EuiFlexItem>
             </EuiFlexGroup>

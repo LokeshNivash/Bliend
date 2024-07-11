@@ -1,7 +1,10 @@
 
 .footer {
     padding: 20px;
-    background-color: #333;
+    background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  background-position: 0% 100%;
+  background-size: 100% 200px;
     color: #fff;
   }
   
@@ -39,9 +42,17 @@
   .footer-link {
     color: #fff !important;
     margin-right: 20px;
+    text-decoration: none;
+
   }
   
   .footer-link:hover {
     text-decoration: underline;
+  }
+
+  .footer-nav p{
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: -2px;
   }
   

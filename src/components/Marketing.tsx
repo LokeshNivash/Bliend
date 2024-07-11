@@ -17,9 +17,9 @@ const MarketingPage = () => {
                         <h2 className="marketing-mobile-title" style={{fontSize:'5vw',textAlign:'center'}}>MARKETING</h2>
                         <div>
                             <EuiImage style={{
-                                height: '600px',
                                 paddingBottom: '50px',
                                 width: 'auto',
+                                maxHeight:"650px",
                                 margin: '0 auto',
                                 transform: "perspective(200px) rotate3D(0, 1, 0, 10deg)"
                             }} alt="tilted-phone" src="/webp-outdoor/OUTDOOR DISPLAY TWO.webp" />
@@ -41,7 +41,7 @@ const MarketingPage = () => {
                         </div>
                         <EuiFlexGroup responsive wrap className="social-contents">
                             {digitalIcons.map((item, index) => (
-                                <EuiFlexItem grow={true} key={index}>
+                                <EuiFlexItem grow={false} key={index}>
                                     <EuiImage style={{ width: '60px', height: 'auto' }}
                                         hasShadow
                                         alt={item.alt} src={item.src} />
@@ -86,8 +86,8 @@ const MarketingPage = () => {
                     <EuiFlexItem grow={false}>
                         <div style={{alignItems:'end',paddingRight:'150px'}}>
                             <EuiImage style={{
-                                height: '600px',
                                 paddingBottom: '50px',
+                                maxHeight:"650px",
                                 width: 'auto',
                                 margin: '0 auto',
                                 transform: "perspective(200px) rotate3D(0, -10, 20, 20deg)"

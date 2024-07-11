@@ -13,7 +13,6 @@ import {
 } from '@elastic/eui';
 import styled from '@emotion/styled';
 import { FunctionComponent, useState } from 'react';
-import './Header.css';
 import ScrollingHeader from './ScrollingHeader';
 
 const HeaderComponent: FunctionComponent = () => {
@@ -39,6 +38,7 @@ const HeaderComponent: FunctionComponent = () => {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.1));
   background-position: 0% 100%;
   background-size: 100% 200px;
+  }
 
     ${useEuiMaxBreakpoint('m')} {
       .nav-items {
@@ -51,12 +51,16 @@ const HeaderComponent: FunctionComponent = () => {
         display: block;
         color:red;
       }
+         .logo-item{
+    display:none;
+  }
          .flyout {
     color: white;
   }
 
         .flyout .header-link {
             color: white;
+            text-decoration:none;
         }
     }
 
@@ -119,6 +123,11 @@ const HeaderComponent: FunctionComponent = () => {
                             </EuiFlexItem>
                             <EuiFlexItem grow={false}>
                                 <HeaderLink onClick={() => {
+                                    document.getElementById('software-solution-section')?.scrollIntoView({ behavior: 'smooth' })
+                                }}>Software Solutions</HeaderLink>
+                            </EuiFlexItem>
+                            <EuiFlexItem grow={false}>
+                                <HeaderLink onClick={() => {
                                     document.getElementById('footer-section')?.scrollIntoView({ behavior: 'smooth' })
                                 }}>Contact Us</HeaderLink>
                             </EuiFlexItem>
@@ -126,9 +135,6 @@ const HeaderComponent: FunctionComponent = () => {
                     </EuiFlexItem>
                 </HeaderContainer>
                 <HeaderContainer>
-                {/* <EuiFlexItem grow={false} className="logo-item">
-                        <EuiHeaderLogo className='text-pulse' iconType="/logo_new.png" ></EuiHeaderLogo>
-                    </EuiFlexItem> */}
                 <ScrollingHeader/>
                 </HeaderContainer>
             </EuiHeader>
@@ -172,6 +178,14 @@ const HeaderComponent: FunctionComponent = () => {
                                     closeFlyout()
                                 }}>
                                     Marketing
+                                </EuiHeaderLink>
+                            </EuiFlexItem>
+                            <EuiFlexItem>
+                                <EuiHeaderLink className='header-link' href="#" onClick={() => {
+                                    document.getElementById('software-solution-section')?.scrollIntoView({ behavior: 'smooth' })
+                                    closeFlyout()
+                                }}>
+                                    Software Solutions
                                 </EuiHeaderLink>
                             </EuiFlexItem>
                             <EuiFlexItem>

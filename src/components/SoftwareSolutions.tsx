@@ -5,7 +5,7 @@ import SliderComponent from "./SliderComponent"
 const SoftwareSolutions = () => {
     return  <EuiPage style={{overflow:'hidden'}} restrictWidth={false} hidden={true}>
     <EuiPageBody>
-    <div className="header" id='advertisement-section'>
+    <div className="header" id='software-solution-section'>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" transform='rotate(180)' 
       style={{ minWidth: '100%',marginTop:"-20px" }}>
         <path fill="url(#grad1)" fillOpacity="1" d="M0,192L48,165.3C96,139,192,85,288,96C384,107,480,181,576,181.3C672,181,768,107,864,101.3C960,96,1056,160,1152,176C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
@@ -26,7 +26,10 @@ const SoftwareSolutions = () => {
     <EuiFlexGroup>
         <EuiFlexItem>
             <div className="title-wrapper">
-            <h1 className="servie-title">SOFTWARE SOLUTIONS</h1>
+            <h1 className="servie-title gradient">SOFTWARE SOLUTIONS</h1>
+            <p className="ad-summary">Software development is the heart of modern innovation, transforming creative ideas into dynamic digital experiences. It enables the creation of customized solutions that cater to unique business needs, enhancing efficiency and user engagement. 
+              {/* By integrating cutting-edge technologies, software development empowers brands to stay ahead in a competitive market. It also fosters collaboration, allowing creative minds to bring their visions to life through seamless integration. Ultimately, it drives the future of digital creativity, blending technical expertise with artistic expression. */}
+              </p>
             </div>
         </EuiFlexItem>
         <EuiFlexItem>
