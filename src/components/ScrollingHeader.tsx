@@ -6,7 +6,7 @@ const ScrollingHeader = () => {
     return (
         <div className="scrolling-header">
             <div className="scrolling-wrapper">
-                <p className="slogan-text">we specialize in transforming brands</p>
+                <p className="slogan-text">INNOVATION MEETS IMAGINATION</p>
             </div>
         </div>
     );

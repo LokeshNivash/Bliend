@@ -25,12 +25,8 @@ const ServicePage: FunctionComponent<ServicePageProps> = ({ size }) => {
                                     <TypeAnimation
                                         cursor={true}
                                         sequence={[
-                                            'WHY YOU NEED US',
+                                            'WHY YOU NEED US ?',
                                             2000,
-                                            'WHY YOU NEED BLIEND',
-                                            2000,
-                                            'HERE WE GO...',
-                                            2000
                                         ]}
                                         wrapper="span"
                                         speed={50}
@@ -55,7 +51,7 @@ const ServicePage: FunctionComponent<ServicePageProps> = ({ size }) => {
                     <EuiFlexItem grow={true}>
                                  <div className="slider-component-wrapper">
                                 <h2 className="service-title ">SERVICES</h2>
-                                <SliderComponent autoplay={true}  />
+                                <SliderComponent autoplay={true} needBlackIcon={false} />
                                 </div>
                                 </EuiFlexItem>
                 </EuiFlexGroup>

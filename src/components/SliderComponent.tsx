@@ -7,14 +7,14 @@ import './SliderComponent.css'
 
 
 const CustomNextArrow = (props: any) => {
-  const { className, style, onClick } = props;
+  const { className, style, onClick,hasBlackIcon } = props;
   return (
     <EuiImage
       className={className}
       style={{
         ...style, display: "block", width: '60px', height: 'auto',
       }}
-      src="/icons/RIGHT SCROLL BUTTON.png"
+      src={!hasBlackIcon ?"/icons/RIGHT SCROLL BUTTON.png":"/icons/RIGHT ICON BLACK.png"}
       alt="right"
       onClick={onClick}
     />
@@ -22,7 +22,7 @@ const CustomNextArrow = (props: any) => {
 };
 
 const CustomPrevArrow = (props: any) => {
-  const { className, style, onClick } = props;
+  const { className, style, onClick,hasBlackIcon } = props;
   return (
     <EuiImage
       className={className}
@@ -30,7 +30,7 @@ const CustomPrevArrow = (props: any) => {
         ...style, display: "block", width: '60px', height: 'auto',
         zIndex: 2
       }}
-      src="/icons/LEFT SCROLL BUTTON.png"
+      src={!hasBlackIcon ?"/icons/LEFT SCROLL BUTTON.png":"/icons/LEFT ICON BLACK.png"}
       alt="left"
       onClick={onClick}
     />
@@ -38,11 +38,13 @@ const CustomPrevArrow = (props: any) => {
 };
 
 export interface SliderComponentProps {
-  autoplay: boolean
+  autoplay: boolean,
+  needBlackIcon:boolean
 }
 
 const SliderComponent: FunctionComponent<SliderComponentProps> = ({
-  autoplay
+  autoplay,
+  needBlackIcon
 }) => {
   const adImages = [
     { id: 1, src: `/webp-outdoor/BILL BOARD.webp`, alt: 'Image 1', title: 'Outdoor' },
@@ -66,8 +68,8 @@ const SliderComponent: FunctionComponent<SliderComponentProps> = ({
     autoplaySpeed: 2200,
     lazyLoad: 'ondemand',
     adaptiveHeight: true,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />
+    nextArrow: <CustomNextArrow hasBlackIcon={needBlackIcon}/>,
+    prevArrow: <CustomPrevArrow hasBlackIcon={needBlackIcon}/>
   };
 
   return (

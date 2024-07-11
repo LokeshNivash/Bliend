@@ -30,7 +30,7 @@ const SoftwareSolutions = () => {
             </div>
         </EuiFlexItem>
         <EuiFlexItem>
-            <SliderComponent autoplay={true}/>
+            <SliderComponent autoplay={true} needBlackIcon={true}/>
         </EuiFlexItem>
     </EuiFlexGroup>
     <div className="software-solution-footer"></div>

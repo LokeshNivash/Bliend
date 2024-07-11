@@ -54,7 +54,7 @@ const AdvertisingPage = () => (
           <EuiFlexItem grow={true} className='billboard'>
             <EuiPageSection className="right-section">
         <h2 className="traditional-ad-title gradient">TRADITIONAL ADVERTISING</h2>
-              <SliderComponent autoplay={true} />
+              <SliderComponent autoplay={true}  needBlackIcon={true}/>
             </EuiPageSection>
 
           </EuiFlexItem>

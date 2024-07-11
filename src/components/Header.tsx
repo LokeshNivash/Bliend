@@ -14,6 +14,7 @@ import {
 import styled from '@emotion/styled';
 import { FunctionComponent, useState } from 'react';
 import './Header.css';
+import ScrollingHeader from './ScrollingHeader';
 
 const HeaderComponent: FunctionComponent = () => {
     const [isFlyoutVisible, setIsFlyoutVisible] = useState(false);
@@ -32,8 +33,12 @@ const HeaderComponent: FunctionComponent = () => {
     align-items: center;
     width: 100%;
     padding: 0 20px;
-    background-color: #0a0a23;
+    background-color: transparent;
     color: white;
+     background-color: rgba(0,0,0,0.2);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.1));
+  background-position: 0% 100%;
+  background-size: 100% 200px;
 
     ${useEuiMaxBreakpoint('m')} {
       .nav-items {
@@ -71,7 +76,8 @@ const HeaderComponent: FunctionComponent = () => {
     padding-right:10px;
     padding-left:10px;
     text-decoration:none;
-    background-color:black;
+    background-color:transparent;
+    border:none;
 
   &:hover {
     background-color:rgba(143, 133, 200, 0.685);
@@ -80,7 +86,7 @@ const HeaderComponent: FunctionComponent = () => {
 
     return (
      <>
-            <EuiHeader style={{ background: '#0a0a23' }} position="fixed">
+            <EuiHeader style={{ background: 'transparent',border:'none' }} position="fixed">
                 <HeaderContainer>
                     <EuiFlexItem grow={false} className="menu-icon">
                         <EuiButtonIcon
@@ -118,9 +124,15 @@ const HeaderComponent: FunctionComponent = () => {
                             </EuiFlexItem>
                         </EuiFlexGroup>
                     </EuiFlexItem>
-
+                </HeaderContainer>
+                <HeaderContainer>
+                {/* <EuiFlexItem grow={false} className="logo-item">
+                        <EuiHeaderLogo className='text-pulse' iconType="/logo_new.png" ></EuiHeaderLogo>
+                    </EuiFlexItem> */}
+                <ScrollingHeader/>
                 </HeaderContainer>
             </EuiHeader>
+
 
             {isFlyoutVisible && (
                 <EuiFlyout
