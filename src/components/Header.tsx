@@ -80,7 +80,7 @@ const HeaderComponent: FunctionComponent = () => {
 
     return (
      <>
-            <EuiHeader style={{ background: '#0a0a23' }} position="fixed" className="custom-headcxer">
+            <EuiHeader style={{ background: '#0a0a23' }} position="fixed">
                 <HeaderContainer>
                     <EuiFlexItem grow={false} className="menu-icon">
                         <EuiButtonIcon
