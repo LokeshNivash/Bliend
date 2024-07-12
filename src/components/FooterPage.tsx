@@ -75,6 +75,11 @@ const Footer = () => {
                             </EuiLink>
                         </EuiFlexItem>
                         <EuiFlexItem grow={false}>
+                            <EuiLink href="https://www.linkedin.com/company/bliend-enterprises-pvt-ltd/" className="footer-link">
+                                <EuiIcon type="/brandLogos/linkedin.png" size="xl" />
+                            </EuiLink>
+                        </EuiFlexItem>
+                        <EuiFlexItem grow={false}>
                             <EuiLink href="https://pin.it/XiQ4pLpQc" className="footer-link">
                                 <EuiIcon type="/brandLogos/pinterest.png" size="xl" />
                             </EuiLink>

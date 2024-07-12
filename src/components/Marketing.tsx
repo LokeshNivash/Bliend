@@ -74,7 +74,7 @@ const MarketingPage = () => {
                                 style={{ width: '200px', height: 'auto', flex: '0 0 auto' }}
                             />
                             <div className="list-items" style={{ flex: '1 1 auto', paddingLeft: '16px' }}>
-                                <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+                                <ul>
                                     <li>SALES</li>
                                     <li>CONTESTS</li>
                                     <li>CAMPAIGNS</li>

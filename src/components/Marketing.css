@@ -51,7 +51,11 @@
   .list-items ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
+  }
+
+  .list-items ul li{
+    padding: 10px;
   }
   
   @media (max-width: 600px) {
