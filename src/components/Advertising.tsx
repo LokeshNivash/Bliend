@@ -37,7 +37,7 @@ const AdvertisingPage = () => (
           </svg>
 
         </div >
-        <EuiFlexGroup >
+        <EuiFlexGroup responsive={true} wrap={true}>
           <EuiFlexItem grow={true} className='leftbox'>
            <h2 className='ad-title gradient'>ADVERTISEMENT</h2>
             <p className="ad-summary">
@@ -51,7 +51,7 @@ const AdvertisingPage = () => (
             </p>
           </EuiFlexItem>
 
-          <EuiFlexItem grow={true} className='billboard'>
+          <EuiFlexItem  grow={true} className='billboard'>
             <EuiPageSection className="right-section">
         <h2 className="traditional-ad-title gradient">TRADITIONAL ADVERTISING</h2>
               <SliderComponent autoplay={true}  needBlackIcon={true}/>

@@ -13,10 +13,10 @@ const ServicePage: FunctionComponent<ServicePageProps> = ({ size }) => {
         id="services-section"
          className="slide-fade-in">
             <EuiPageBody component="div">
-                <EuiFlexGroup responsive={true} direction="row" gutterSize="none">
+                <EuiFlexGroup responsive={true} wrap={true} direction="row" gutterSize="none">
                     <EuiFlexItem grow={true}>
-                        <EuiPageSection className="left-section">
-                            <div className="box ">
+                        <EuiPageSection>
+                            <div className="box">
                                 <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', paddingTop: '0' }}>
                                     <img src="/logo_new.png" alt="Company Logo" style={{ width: '50px', height: '50px', marginRight: '10px' }} className="icon-bounce" />
                                     <h2 className="title fade-in">BLIEND</h2>
