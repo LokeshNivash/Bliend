@@ -64,6 +64,26 @@ html, body, #root {
   }
 }
 
+.icon-dissolve{
+  animation: dissolve 4s infinite;
+
+}
+
+@keyframes dissolve {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+
 .text-pulse {
   animation: pulse 2s infinite;
 }

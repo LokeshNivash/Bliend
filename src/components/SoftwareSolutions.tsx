@@ -1,6 +1,7 @@
 import { EuiFlexGroup, EuiFlexItem, EuiPage, EuiPageBody, EuiText } from "@elastic/eui"
 import './SoftwareSolutions.css'
 import SliderComponent from "./SliderComponent"
+import ScrollFadeIn from "./ScrollPageContent"
 
 const SoftwareSolutions = () => {
     return  <EuiPage style={{overflow:'hidden'}} restrictWidth={false} hidden={true}>
@@ -25,15 +26,19 @@ const SoftwareSolutions = () => {
     </div >
     <EuiFlexGroup>
         <EuiFlexItem>
+          <ScrollFadeIn slideFromLeft={true}>
             <div className="title-wrapper">
             <h1 className="servie-title gradient">SOFTWARE SOLUTIONS</h1>
             <p className="ad-summary">Software development is the heart of modern innovation, transforming creative ideas into dynamic digital experiences. It enables the creation of customized solutions that cater to unique business needs, enhancing efficiency and user engagement. 
               {/* By integrating cutting-edge technologies, software development empowers brands to stay ahead in a competitive market. It also fosters collaboration, allowing creative minds to bring their visions to life through seamless integration. Ultimately, it drives the future of digital creativity, blending technical expertise with artistic expression. */}
               </p>
             </div>
+            </ScrollFadeIn>
         </EuiFlexItem>
         <EuiFlexItem>
+          <ScrollFadeIn  slideFromLeft={false}>
             <SliderComponent autoplay={true} needBlackIcon={true}/>
+            </ScrollFadeIn>
         </EuiFlexItem>
     </EuiFlexGroup>
     <div className="software-solution-footer"></div>

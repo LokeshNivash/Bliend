@@ -2,6 +2,7 @@ import { EuiFlexGroup, EuiFlexItem, EuiImage, EuiPage, EuiPageBody, EuiPageSecti
 import '@elastic/eui/dist/eui_theme_light.css';
 import './Advertising.css';
 import SliderComponent from './SliderComponent';
+import ScrollFadeIn from './ScrollPageContent';
 
 const AdvertisingPage = () => (
   <>
@@ -39,6 +40,7 @@ const AdvertisingPage = () => (
         </div >
         <EuiFlexGroup responsive={true} wrap={true}>
           <EuiFlexItem grow={true} className='leftbox'>
+            <ScrollFadeIn slideFromLeft={true}>
            <h2 className='ad-title gradient'>ADVERTISEMENT</h2>
             <p className="ad-summary">
               We offer a wide array of
@@ -49,12 +51,15 @@ const AdvertisingPage = () => (
               enhancing our advertising
               endeavors.
             </p>
+            </ScrollFadeIn>
           </EuiFlexItem>
 
           <EuiFlexItem  grow={true} className='billboard'>
             <EuiPageSection className="right-section">
+              <ScrollFadeIn slideFromLeft={false}>
         <h2 className="traditional-ad-title gradient">TRADITIONAL ADVERTISING</h2>
               <SliderComponent autoplay={true}  needBlackIcon={true}/>
+              </ScrollFadeIn>
             </EuiPageSection>
 
           </EuiFlexItem>

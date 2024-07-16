@@ -3,19 +3,17 @@ import { FunctionComponent } from "react"
 import SliderComponent from "./SliderComponent"
 import { TypeAnimation } from 'react-type-animation';
 import './ServicePage.css'
+import ScrollFadeIn from "./ScrollPageContent";
 
-export interface ServicePageProps {
-    size?: number
-}
-const ServicePage: FunctionComponent<ServicePageProps> = ({ size }) => {
-    return <>
-        <EuiPage style={{ backgroundColor: 'transparent', paddingBottom: '200px' }} 
-        id="services-section"
-         className="slide-fade-in">
+
+const ServicePage: FunctionComponent = () => {
+    return <EuiPage style={{ backgroundColor: 'transparent', paddingBottom: '200px' }} 
+        id="services-section">
             <EuiPageBody component="div">
                 <EuiFlexGroup responsive={true} wrap={true} direction="row" gutterSize="none">
                     <EuiFlexItem grow={true}>
                         <EuiPageSection>
+                        <ScrollFadeIn slideFromLeft={true}>
                             <div className="box">
                                 <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', paddingTop: '0' }}>
                                     <img src="/logo_new.png" alt="Company Logo" style={{ width: '50px', height: '50px', marginRight: '10px' }} className="icon-bounce" />
@@ -46,18 +44,20 @@ const ServicePage: FunctionComponent<ServicePageProps> = ({ size }) => {
                                     competitive market.
                                 </p>
                             </div>
+                            </ScrollFadeIn>
                         </EuiPageSection>
                     </EuiFlexItem>
                     <EuiFlexItem grow={true}>
+                        <ScrollFadeIn slideFromLeft={false}>
                                  <div className="slider-component-wrapper">
                                 <h2 className="service-title ">SERVICES</h2>
                                 <SliderComponent autoplay={true} needBlackIcon={false} />
                                 </div>
-                                </EuiFlexItem>
+                                </ScrollFadeIn>
+                    </EuiFlexItem>
                 </EuiFlexGroup>
             </EuiPageBody>
         </EuiPage>
-    </>
 }
 
 export default ServicePage

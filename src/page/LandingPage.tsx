@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import AdvertisingPage from "../components/Advertising"
 import Footer from "../components/FooterPage"
 import HeaderComponent from "../components/Header"
@@ -13,10 +12,9 @@ const LandingPage = () => {
 
   return <div>
     <div className="app-page">
+
       <HeaderComponent />
       <div style={{ height: "50px", width: 'auto' }}></div>
-      {/* <ScrollingHeader/>
-          <div style={{height:"5px",width:'auto'}}></div> */}
       <ServicePage />
     </div>
     <div >
@@ -27,6 +25,7 @@ const LandingPage = () => {
     </div>
     <div>
       <SoftwareSolutions />
+      
     </div>
     <div className='app-page'>
       <TestimonialPage />
@@ -34,6 +33,7 @@ const LandingPage = () => {
       <div >
         <Footer />
       </div>
+      
     </div>
 
   </div>
